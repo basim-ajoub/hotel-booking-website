@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="compile/index.css">
+    <title>Ajjoub Hotel Managment</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <h1>Ajjoub Hotel Managment System</h1>
+            </div>
+            <div class="bar">
+                <ul class="bar-list">
+
+                    <li>
+                        <input type="text">
+                    </li>
+
+                    <li>
+                        <button id="home-button">Home</button> 
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!--START SLID MENU-->
+<div class="slid-container">
+ 
+
+        <!--START CONTAINER-->
+        <div class="container">
+            <!--START SHOW GASTS LIST-->
+            <div class="show-gast hide">
+
+                <h4>Gasts List</h4>
+                <div class="gast-table">
+                <table class="gasts-lists">
+                    <tr>
+                        <th>Name</th>
+                        <th>Nationality</th>
+                        <th>Room No.</th>
+                        <th>Reservation Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Total Nights</th>
+
+                    </tr>
+                </table>
+                 </div>
+            </div>
+            <!--END SHOW GASTS LIST-->
+
+            <!--Start Add room-->
+            <div class="room hide">
+                <form id="add-room-form" action="get">
+                    <p>Room Type:</p>
+                    <select name="room-type" id="room-type">
+                        <option value="single">Single Room</option>
+                        <option value="suit">Suit Room</option>
+                        <option value="golden">Golden Room</option>
+                    </select>
+                    <p>ROOM No.:</p>
+                    <input type="number"  id="room-number">
+                    <p>floor:</p>
+                    <input type="number" id="room-floor">
+                    <p>Room Situation:</p>
+                    <input type="text" id="room-situation" >
+                    <p>Room avalibale:</p>
+                    <select name="room-avalibale" id="room-availability">
+                        <option value="available">Available</option>
+                        <option value="notavailable">Not Available</option>
+                    </select>
+                    <button id="add-room-button" type="button">Add Room </button><br>
+                </form>
+                    
+                    
+                <div class="room-galery">
+
+                </div> 
+            </div>
+            <!--End Add room-->
+
+            <div class="box-lf">
+                <div class="box-lf-top home-page hide">
+                    <div class="inside-box-rt-item ">
+                        <img src="images/black.png" alt="">
+                        <p>5</p><br>
+                        <h4>Aktive Staff</h4>
+                    </div>
+                    <div class="inside-box-lf-item">
+
+                        <img src="images/black.png" alt="">
+                        <p>22</p><br>
+                        <h4>Guest Number</h4>
+                    </div>
+                </div>
+                <div class="box-lf-bottom">
+                    <form class="add-employer hide" action="">
+                        <h3>Add New Employer</h3>
+                        <p>Employer Name:</p>
+                        <input type="text">
+                        <p>Age:</p>
+                        <input type="number">
+                        <p>Nationality:</p>
+                        <input type="text">
+                        <p>Position:</p>
+                        <input type="text">
+                        <p>Start Time:</p>
+                        <input type="time">
+                        <p>End Time:</p>
+                        <input type="time">
+                        <p>Working Days:</p>
+                        <input type="week">
+                    </form>
+                    <form class="add-guest hide" action="">
+                        <h3>Add New Guest</h3>
+                        <p >Guest Name:</p>
+                        <input class="guest-name" type="text">
+                        <p>Birth Date:</p>
+                        <input type="date">
+                        <p>Nationality:</p>
+                        <input class="guest-nationality" type="text">
+                        <p>ID Number:</p>
+                        <input type="text">
+                        <p>Number Of Guest:</p>
+                        <input type="text">
+                        <!--room discription-->
+                        <div class="room-discription">
+                            <!--left column-->
+                            <div class="rd-left">
+                                
+                        
+                            <p>Booking Date From:</p>
+                            <input class="guest-booking-from" type="date">
+                            <p>Room No.:</p>
+                        <input class="room-number" type="number">
+                        <p>Service Type:</p>
+                                <select name="service-type" class="service-type">
+                                <option value="V">VIP</option>
+                                <option value="G">Golden</option>
+                                <option value="P">Premium</option>
+                                <option value="E">Economy</option>
+                                </select>
+
+                                <p>Tax:</p>
+                                <select name="tax-type" class="tax-type">
+                                    <option value="Inc-tax">Including Tax</option>
+                                    <option value="Dis-tax">Discluding Tax</option>
+                                </select>
+
+                            </div>
+                            <!--Right column-->
+                            <div class="rd-right">
+                                <p>To:</p>
+                                <input class="guest-booking-to" type="date">
+                                   
+                               <p>Floor:</p>
+                               <input type="number">
+                               <p>Food Service:</p>
+                               <select name="food-service" class="food-service">
+                               <option value="B">Breakfast</option>
+                               <option value="L">Lunch</option>
+                                <option value="B">Dinner</option>
+                               <option value="B">Breakfast + Dinner</option>
+                               </select>
+                               <p>Discount Code:</p>
+                               <input type="text">
+                            </div>
+
+                        </div>
+ 
+                    </form>
+                </div>
+            </div>
+            
+            <div class="box-rt">
+                <div class="box-rt-top home-page hide">
+                    <div class="inside-box-rt-item">
+                        <img src="images/black.png" alt="">
+                        <p>12</p><br>
+                        <h4>Aktiv Room</h4>
+                    </div>
+                    <div class="inside-box-lf-item">
+                        <img src="images/black.png" alt="">
+                        <p>8</p><br>
+                        <h4>Empty Room</h4>
+                    </div>
+                </div>
+                <div class="box-rt-bottom ">
+                    <form class="add-employer hide" action="">
+                        <img src="images/emplyer-pic.jpg" value="emp-img" alt="">
+                        <input type="file" class="file-image">
+                    </form>
+                    <form class="add-guest hide" action="">
+                        <p>Add Relatives</p>
+                        <div class="person">
+                         <input type="text">
+                         <p>Person-1</p><input type="checkbox" class="person p-1">
+                        </div>
+                        <p>Name:</p>
+                        <input type="text">
+                        <p>Birth Date:</p>
+                        <input type="date">
+                        <p>Nationality:</p>
+                        <input type="text">
+                        <p>ID Number:</p>
+                        <input type="text">
+                        <div class="person">
+                         <input type="text">
+                         <p>Person-2</p><input type="checkbox" class="person p-2">
+                        </div>
+                        <p>Name:</p>
+                        <input type="text">
+                        <p>Birth Date:</p>
+                        <input type="date">
+                        <p>Nationality:</p>
+                        <input type="text">
+                        <p>ID Number:</p>
+                        <input type="text"><br>
+                        <button id="add-guest-btn" type="button">Save</button>
+                        
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+           <!--END CONTAINER-->
+        <div class="slid-menu">
+            <div class="slid-title">
+                <h2>Ajjoub Hotel</h2>
+            </div>
+            <div class="slid-items">
+                <ul class="items">
+                    <li id="add-room"><a><span>Add Room</span></a></li>
+                    <li id="add-guest"><a><span>Add Guest</span></a></li>
+                    <li id="add-employer"><a><span>Add Employer</span></a></li>
+                    <li id="show-our-guest-list-btn"><a><span>Show Guests List</span></a></li>
+                    <li><a><span>Change Information</span></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+ </div>
+        <!--END SLID MENU-->
+   
+     
+
+        <!--START FOOTER-->
+        <div class="footer">
+        <h5>@Ajjoub Hotel All Rights Reserved</h5>
+        </div>
+        <!--END FOOTER-->
+    </div>
+    </html>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="vue.js"></script>
+    <script>
+        
+    </script>
+
+</body>

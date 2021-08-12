@@ -1,0 +1,438 @@
+$MainColor:#0d2137;
+$FontColor: #FF8E2B;
+$defaultColor:#2E77AE;
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: $MainColor;
+}
+.header{
+    width: 100%;
+    height: 8vh;
+    background-color: $FontColor;
+    
+}
+.bar{
+    @extend %header-main;
+    width: 40%;
+    
+ 
+    .bar-list{
+        display: flex;
+        list-style: none;
+        margin-top:4vh;
+        margin-right: 15%;
+    }
+    .bar-list li{
+     
+            margin-right: 10%;
+       
+    }
+}
+.logo{
+    @extend %header-main;
+    margin-top: 1vh;
+    width: 60%;
+    color: $MainColor;
+    
+}
+.slid-menu{
+    width: 20%;
+    height: 88vh;
+    background-color: $FontColor;
+    float: left;
+    
+    
+    .slid-title{
+        height: 15vh;
+        text-align: center;
+        padding-top: 8vh;
+        background-color: $FontColor;
+        color: $MainColor;
+    }
+    .slid-items{
+
+        .items{
+            list-style: none;
+           
+            border: 2px solid $MainColor;
+            border-top-left-radius: 7%;
+            border-top-right-radius: 7%;
+            li{
+             
+                @extend %best-hover;
+                border-bottom: 1px solid $MainColor;
+                height: 5vh;
+                text-align: center;
+                cursor: pointer;
+                color: $MainColor;
+                
+          
+            }
+        }
+    }
+}
+.slid-container{
+    width: 100%;
+    height: 88vh;
+    margin-top: 0.3vh;
+    background-color: $MainColor;
+    
+}
+.container{
+    width: 79.5%;
+    height: 88vh;
+    float: left;
+    margin-right: 0.5%;
+    background-color: $MainColor;
+    overflow: hidden;
+    .box-lf-top{
+        display: none;
+    }
+    .box-rt-top{
+        display: none;
+    }
+    .add-employer{
+        display: none;
+    }
+    .add-guest{
+         display: none;
+         
+    }
+    .show-gast{
+       
+        width: 100%;
+        text-align: center;
+
+        h4{
+            color: $FontColor;
+            margin: 5vh 0 5vh 0;
+        }
+        .gast-table{
+            height: 80vh;
+            overflow-y: scroll;
+            overflow-x: scroll;
+        }
+        table{
+           
+            width: 100%;
+            border: 1px solid $FontColor;
+            
+
+            th{
+                background-color: $FontColor;
+                color: $MainColor;
+              
+            }
+            td{
+                
+                text-align: center;
+                color: $FontColor;
+                border-bottom: 0.5px solid $FontColor;
+            }
+         
+        }
+    }
+    .room{
+        height: 86.28vh;
+        width: 77%;
+        margin: 2vh 1% 1vh 1%;
+        position: absolute;
+        display: none;
+        overflow-y: scroll;
+        #add-room-form{
+            width: 96%;
+            height: 10vh;
+            p,input,select{float: left;}
+            input{width: 13%;font-size: 15px;}
+            button{float: inline-start;}
+ 
+        }
+        #add-room{
+            width: 25%;
+            height: 40vh;
+            margin-right: 15%;
+            margin-top: 12vh;
+            background-color: #2E77AE;
+            margin: 5vh 2% 3vh 2%;
+            text-align: center;
+            float: left;
+            color: $FontColor;
+
+            img{
+                width: 100%;
+                height: 30vh;
+                border: 1px solid $FontColor;
+            }
+            #add-room-discription{
+                width: 100%;
+                height: 10vh;
+                background-color: $FontColor;
+                color: $MainColor;
+                
+
+            }
+        }
+        button{
+            @extend %save-button;
+            margin-top: 2vh;
+        }
+        form{
+            color: $FontColor;
+        }
+     
+    }
+
+    .box-lf{
+      @extend %container-box;
+      .box-lf-top{
+          @extend %box-lf-rt-top-bottom;
+          height: 30vh;
+          padding-left: 1%;
+          
+          
+      }
+      .box-lf-bottom{
+        @extend %box-lf-rt-top-bottom;
+        height: 70vh;
+        padding-left: 20%;  
+        margin-top: 3vh;
+       @extend %add-employer;
+
+    }
+    .inside-box-lf-item{
+        @extend %inside-box-rt-lf-item;
+        background-color: $FontColor;
+    }
+    .inside-box-rt-item{
+        @extend %inside-box-rt-lf-item;
+        background-color: $FontColor;
+        margin-left: 2%;
+    }
+    
+    }
+    .box-rt{
+        @extend %container-box;
+        .box-rt-top{
+            @extend %box-lf-rt-top-bottom;
+            height: 30vh;
+            padding-left: 1%;
+           
+        }
+        .box-rt-bottom{
+        @extend %box-lf-rt-top-bottom;
+        height: 70vh;         
+        margin-top: 3vh;     
+        
+        @extend %add-employer;
+      
+      }
+      .inside-box-lf-item{
+        @extend %inside-box-rt-lf-item;
+        background-color: #FF8E2B;
+        
+    }
+    .inside-box-rt-item{
+        @extend %inside-box-rt-lf-item;
+        background-color: #FF8E2B;
+        
+    }
+    }
+   
+}
+
+.footer{
+    width: 100%;
+    height: 3vh;
+    margin-top: 0.3vh;
+    background-color: $FontColor;
+    color: $MainColor;
+    text-align: center;
+    
+}
+%header-main{
+   
+    height: 4vh;
+    float: left;
+    text-align: center;
+}
+%container-box{
+    width: 49%;
+    height: 86vh;
+   
+    float: left;
+    margin: 0.5vh 0.01vh 0.5vh 1vh;
+}
+%box-lf-rt-top-bottom{
+    width: 100%;
+  
+    margin-bottom: 0.5vh;
+  
+    
+   
+    
+}
+%inside-box-rt-lf-item{
+    width: 47%;
+    height: 22vh;
+    float: left;
+    margin: 0.3vh 0vh 0.3vh 1vh;
+    background-color: $FontColor;
+    cursor: pointer;
+    img{
+        border-radius: 50%;
+        width: 30%;
+        background-color: $defaultColor;
+        float: inline-end;
+        margin-right: 2%;
+        margin-top: 0.7vh;
+    }
+    p{
+        float: inline-start;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 4vh;
+        width: 30%;
+        border-radius: 50%;
+        height: 9vh;
+        background-color: $defaultColor;
+        margin-left: 2%;
+        margin-top: 0.7vh;
+    }
+    h4{
+        width: 100%;
+        text-align: center;
+        margin-top: 15vh;
+    }
+}
+%add-employer{
+    
+    form{
+        margin-left: 5%;
+        h3{
+            margin-bottom: 4vh;
+            color: $FontColor;
+
+        }
+        
+        .room-discription{
+            width: 100%;
+            background-color: #ff8e2b1a;
+            .rd-left,.rd-right{
+                width: 33%;
+                float: left;
+                input,select{
+                    width: 81%;
+                }
+
+            }
+           
+        }
+
+       
+      
+       input{
+           margin-bottom: 2.3vh;
+           margin-top: 0.3vh;
+           width: 60%;
+       }
+       .person{
+           width: 0%;
+           display: flex;
+       }
+       p{
+           color: $FontColor;
+       }
+       button{
+          @extend %save-button;
+
+       }
+    }
+    img{
+        width: 40%;
+        height: 30vh;
+        align-items: center;
+        border-radius: 50%;
+        margin-top: 5vh;
+        margin-left: 25%;
+    }
+    .file-image{
+        margin-left: 27%;
+    }
+}
+%save-button{
+    width: 10vh;
+    border-radius: 30%;
+    &:hover{
+        background-color: #FF8E2B;
+        transition: ease-in-out 0.4s;
+        cursor: pointer;
+    }
+}
+%dark-hover-button{
+    background-color: $MainColor;
+    color: $FontColor;
+    transition: ease-in-out 0.4ms;
+}
+
+
+%best-hover{
+    .li{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      a{
+        display: block;
+        width: 100%;
+        height: 5vh;
+        line-height: 5vh;
+        font-size: 18px;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: $MainColor;   
+        border-top-left-radius: 15%;
+        border-top-right-radius: 15%;
+        letter-spacing: 1px;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+      }
+      
+      a span{
+        position: relative;
+        z-index: 2;
+      }
+      
+      a:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $MainColor;
+        transition: all .35s;
+      }
+      
+      a:hover{
+        color: $FontColor;
+        border-top-left-radius: 25%;
+        border-top-right-radius: 25%;
+      }
+      
+      a:hover:after{
+        width: 100%;
+        border-top-left-radius: 25%;
+        border-top-right-radius: 25%;
+      }
+      
+          
+      
+}
